@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.tablayoutdemo.R
+import com.example.tablayoutdemo.databinding.FragmentHomeBinding
+import com.example.tablayoutdemo.databinding.FragmentProfileBinding
+import com.example.tablayoutdemo.databinding.FragmentSettingsBinding
 
 
 class SettingsFragment : Fragment() {
-
+    private lateinit var mBining: FragmentSettingsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +23,9 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false)
+        mBining = FragmentSettingsBinding.inflate(inflater,container,false)
+        return mBining.root
+
     }
 
 

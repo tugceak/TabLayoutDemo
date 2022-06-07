@@ -6,9 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.tablayoutdemo.R
+import com.example.tablayoutdemo.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
-
+    private lateinit var mBining: FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
